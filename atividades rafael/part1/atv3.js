@@ -1,7 +1,14 @@
 // altero o programa anterios para fornecer a tabuada do numero que o usuario pedir
 
-console.log("Tabuada do 5:");
-for (let i = 1; i <= 10; i++) {
-    let resultado = 5 * i;
-    console.log(`5 x ${i} = ${resultado}`);
+function tabuada() {
+   
+    let numero = document.getElementById('numero').value;
+    let resultado = document.getElementById(`resultado`);
+    let n = Number(numero);
+    resultado.innerHTML = "";
+    for(let i = 1; i <= 10; i++){
+        let multiplicacao = n * i;
+        console.log(n + "x" + i + "=" + multiplicacao);
+        resultado.innerHTML += n + "x" + i + "=" + multiplicacao + "<br>";
+    }
 }
